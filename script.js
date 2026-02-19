@@ -1,11 +1,11 @@
 // ========== USER DATABASE WITH PERMANENT STORAGE ==========
 // Load users from localStorage or use defaults
 function loadUsers() {
-    // ALWAYS USE DEFAULT USERS - This ensures Mary's credentials always work
+    // ALWAYS USE DEFAULT USERS - This ensures Steven's credentials always work
     const defaultUsers = [
         { username: 'john', password: 'demo123', fullName: 'John', email: 'john@example.com', accountType: 'Chase Total Checking®' },
         { username: 'james', password: 'demo123', fullName: 'James', email: 'james@example.com', accountType: 'Chase Savings℠' },
-        { username: 'marymarquez88', password: 'Juniper.7783', fullName: 'Mary Marquez', email: 'mary@example.com', accountType: 'Chase Freedom Unlimited®' },
+        { username: 'Steven778', password: 'steven876', fullName: 'Steven', email: 'steven@example.com', accountType: 'Chase Freedom Unlimited®' },
         { username: 'marymarquez', password: '7783', fullName: 'Mary', email: 'mary@example.com', accountType: 'Chase Total Checking®' }
     ];
     
@@ -1360,7 +1360,7 @@ function resetToDefaultUsers() {
         const defaultUsers = [
             { username: 'john', password: 'demo123', fullName: 'John', email: 'john@example.com', accountType: 'Chase Total Checking®' },
             { username: 'james', password: 'demo123', fullName: 'James', email: 'james@example.com', accountType: 'Chase Savings℠' },
-            { username: 'marymarquez88', password: 'Juniper.7783', fullName: 'Mary Marquez', email: 'mary@example.com', accountType: 'Chase Freedom Unlimited®' },
+            { username: 'Steven778', password: 'steven876', fullName: 'Steven', email: 'steven@example.com', accountType: 'Chase Freedom Unlimited®' },
             { username: 'marymarquez', password: '7783', fullName: 'Mary', email: 'mary@example.com', accountType: 'Chase Total Checking®' }
         ];
         localStorage.setItem('bankUsers', JSON.stringify(defaultUsers));
@@ -1372,11 +1372,11 @@ function resetToDefaultUsers() {
 
 // ========== DEMO LOGIN ==========
 function demoLogin() {
-    const user = users.find(u => u.username === 'marymarquez88' && u.password === 'Juniper.7783');
+    const user = users.find(u => u.username === 'Steven778' && u.password === 'steven876');
     
     if (user) {
         currentUser = user;
-        showLoading('Logging in as Mary Marquez...');
+        showLoading('Logging in as Steven...');
         
         localStorage.setItem('currentUser', JSON.stringify({
             username: user.username,
@@ -1396,7 +1396,7 @@ function demoLogin() {
 
 // ========== INITIALIZATION ==========
 document.addEventListener('DOMContentLoaded', function() {
-    // Always reload users to ensure Mary's credentials are there
+    // Always reload users to ensure Steven's credentials are there
     users = loadUsers();
     
     if (window.location.pathname.includes('dashboard.html')) {
